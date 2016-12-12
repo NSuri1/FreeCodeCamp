@@ -1,4 +1,44 @@
-.btn-parent {
-	text-align: center;
-	margin-top: 50px;
+body {
+	background-color: #000;
+	color: #98002E;
 }
+
+#container {
+	width: 100%;
+	height: 100%;
+}
+
+.page {
+	width: 100vw;
+	height: 100vh;
+	background-image: url("timeline.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#name {
+	color: #98002E;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+#intro {
+	font-style: italic;
+	margin-left: 20%;
+	margin-top: 40px;
+}
+
+.scroll-down {
+	color: #98002E;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+.scroll-down:hover {
+	color: #FFF;
+}
+
