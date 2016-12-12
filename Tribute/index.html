@@ -2,10 +2,31 @@
 <html>
 <head>
 	<title>Tribute Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
-	<div>
+	<h1 class="text-primary text-center" id="placeholder">
 		This is where I will write the tribute
+	</h1>
+	<div class="btn-parent">
+		<button class="btn btn-primary" id="btn-show">Show Placeholder</button>
+		<button class="btn btn-danger" id="btn-hide">Hide Placeholder</button>
 	</div>
+
+	<script>
+		//test jQuery
+		$(document).ready(function(){
+			$("#btn-hide").click(function(){
+				$("#placeholder").hide();
+			});
+			$("#btn-show").click(function(){
+				$("#placeholder").show();
+			});
+		});
+	</script>
+	
 </body>
 </html>
