@@ -37,5 +37,26 @@
 }
 
 .section {
-	margin-top: 50px;
+	padding-top: 20px;
+}
+
+.box {
+	background-color: #EEEEEE;
+	height: 300px;
+	margin: 10px;
+	box-shadow: 10px 10px 5px grey;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.caption {
+	text-align: center;
+	padding: 20px;
+	color: #000;
+}
+
+.image {
+	width: 225px;
 }
