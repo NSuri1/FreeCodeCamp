@@ -1,6 +1,27 @@
 body {
-	background-image: url("apple.png");
 	background-color: #FFF;
-	background-repeat: no-repeat;
-	background-size: 100%;
+	font-family: 'Bitter', serif;
+	z-index: 1;
+}
+
+#apple {
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	z-index: -1;
+}
+
+.page {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrow {
+	position: absolute;
+	bottom: 5%;
+	left: 49%;
 }

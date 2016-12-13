@@ -6,27 +6,31 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://use.fontawesome.com/1aca107b8e.js"></script> 
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 
 
 </head>
 <body>
 	<div id="container">
+		<img src="apple.png" alt="Apple logo" class="img-responsive" id="apple">
 		<div class="page" id="home">
-		
+			<h1 id="brand">Apple</h1>
+			<a href="#"><i class="fa fa-arrow-circle-down fa-2x arrow"></i></a>
 		</div>
 		<div class="page">
-			
+			<h1>Apple1</h1>
+			<a href="#"><i class="fa fa-arrow-circle-down fa-2x"></i></a>
 		</div>
 		<div class="page">
-			
+			<h1>Apple2</h1>
+			<a href="#"><i class="fa fa-arrow-circle-down fa-2x"></i></a>
 		</div>
 	</div>
-	
+
 	<script>
 		$(document).ready(function(){
-			//$("a").click(function(){
-			//	console.log("anchor tag clicked...");
-			//});
+			$("#container").hide();
+			$("#container").fadeIn(2000);
 		});
 	</script>
 	
