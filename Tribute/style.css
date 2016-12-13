@@ -1,37 +1,6 @@
 body {
-	background-color: #000;
-	color: #FFF;
-}
-
-#container {
-	width: 100%;
-	height: 100%;
-}
-
-#home {
-	background-image: url("dwyane.jpg");
+	background-image: url("apple.png");
+	background-color: #FFF;
 	background-repeat: no-repeat;
+	background-size: 100%;
 }
-
-.page {
-	width: 100vw;
-	height: 100vh;
-	background-image: url("timeline.png");
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-.scroll-down {
-	color: #98002E;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 30px;
-}
-
-.scroll-down:hover {
-	color: #FFF;
-}
-
