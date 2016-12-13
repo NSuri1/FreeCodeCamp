@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Nalin Suri</title>
+	<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -9,45 +11,25 @@
 	<script src="script.js"></script>
 </head>
 <body>
-
-	<header>
-		<ul id="nav">
-			<li>
-				<a href="#one" target="_self">HOME</a>
-			</li>
-
-
-			<li>
-				<a href="#two" target="_self">ABOUT ME</a>
-			</li>
-
-
-			<li id="third">
-				<a href="#three" target="_self">CONTACT</a>
-			</li>
-		</ul>
-	</header>
-
-
-	<div class="page one" id="one">
-		<div id="home">
-			<img alt="Nalin Suri" id="mePic" src="me.png" width="250px">
-
-			<div class="name">
-				<div id="myName">
-					Nalin Suri
-				</div>
-
-
-				<div id="myCar">
-					Aspiring Software Developer
-				</div>
+	<div id="container">
+		<nav class="navbar navbar-inverse" style="margin-bottom: 0px;">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav navbar-right text-center">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">My Work</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
 			</div>
+		</nav>
 
-
+		<div class="text-primary text-center jumbotron bitter-font">
+			<img src="me.png" alt="Profile Picture" id="mePic">
+			<h1>Nalin Suri</h1>
+			<h4>Aspiring Software Developer</h4>
 			<div id="social">
 				<div>
-					<a href="https://github.com/NSuri1" id="git" target="_blank"><i aria-hidden="true" class="fa fa-github-square fa-3x"></i></a>
+					<a href="https://github.com/NSuri1" id="git" target="_blank"><i aria-hidden="true" class="fa fa-github-square fa-3x "></i></a>
 				</div>
 
 				<div>
@@ -60,109 +42,18 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="page two" id="two">
-		<div id="about">
-			<p id="welcome">Welcome to Suriosity.com, an informal website where I would
-			like to tell you a little about myself.</p>
 
-
-			<p>From the picture and the caption beneath the picture, you'll see what I
-			look like and my name. A picture can be worth a thousand words but I would
-			like to give you a thousand and two words about myself, so here it is. I am
-			a proud Panther, representing FIU; I am a motivated and responsible person,
-			always trying to give 110%; I am a curious young man, trying to figure out
-			what life is all about and how things work. My ambitions and desires in life
-			are simple: I want to be happy most of all, and I want to become an
-			acknowledged software developer.</p>
-
-
-			<p>My interest in computers has been around since I was a young child and
-			has cultivated into a passion that I like to sink myself into whenever I
-			can. When I was first introduced to programming, I was left stupefied. I was
-			flabbergasted at what I could make a computer do; and at that point all I
-			had done was make a computer say "Hello World." I enrolled in an "Intro to
-			C++" class and learned about the basic terms and concepts in Computer
-			Science. I was able to use loops and read files and do much more which
-			astounded me at that time. But then I realized that the more I knew, the
-			more I didn't know. When given the choice to continue the course and take
-			the second level "Objected Oriented Programming with C++", I gladly took it.
-			I was intellectually challenged with the once daunting concepts such as
-			linked lists and inheritance. Fortunately for me, I had a friend, who become
-			a mentor in many ways, and another pal, who I was taking the class with,
-			help explain, conceptualize, and soldify the concepts.</p>
-
-
-			<p>Since then, I've dabbled with HTML/CSS and PHP (which I used to create this website), became familiar with the Linux shell, and am now in pursuit of understanding another object oriented programming language: Java. In the coming future, I know I would like to learn about Mobile App Development, Virtual Reality and Artificial Intelligence/Machine Learning.</p>
-
-
-			<p>Besides that, in my free time, I like to enjoy the natural beauty of
-			life. Living in Miami has given me no shortage of the ability to do as such.
-			I love going to the beach and seeing the never-ending horizon atop the water
-			and the awe-inspiring sunsets. I also love to play and watch basketball. My
-			favorite team in the NBA is, and always has been the Miami Heat. Besides
-			basketball, my friends have also built up my involvement and liking of
-			ultimate frisbee.</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="container">
+						<img src="">
+						<div ></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="page three" id="three">
-		<div id="contact">
-			<form action="sendMail.php" id="htmlform" method="post" name="htmlform">
-				<table width="450px">
-					<tr>
-						<td><label for="first">First Name</label>
-						</td>
 
-						<td><input maxlength="40" name="first_name" size="10" type="text">
-						</td>
-					</tr>
-
-
-					<tr>
-						<td><label for="last">Last Name</label>
-						</td>
-
-						<td><input maxlength="40" name="last_name" size="25" type="text">
-						</td>
-					</tr>
-
-
-					<tr>
-						<td><label for="em">Email Address</label>
-						</td>
-
-						<td><input maxlength="80" name="email" size="25" type="text">
-						</td>
-					</tr>
-
-
-					<tr>
-						<td><label for="phone">Telephone Number</label>
-						</td>
-
-						<td><input maxlength="25" name="telephone" size="25" type="text">
-						</td>
-					</tr>
-
-
-					<tr>
-						<td><label for="comment">Message</label>
-						</td>
-
-						<td>
-						<textarea cols="25" maxlength="1000" name="comments" rows="5"></textarea>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td colspan="2" style="text-align:center"><input type="submit" value=
-						"Submit">
-						</td>
-					</tr>
-				</table>
-			</form>
-		</div>
-	</div>
 </body>
 </html>
