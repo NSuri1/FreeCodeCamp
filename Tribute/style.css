@@ -2,19 +2,6 @@ body {
 	background-color: #FFF;
 	font-family: 'Bitter', serif;
 	z-index: 1;
-	font-size: 100%;
-}
-
-h1 {
-	font-size: 6em;
-}
-
-q {
-	font-size: 2em;
-}
-
-h3 {
-	font-size: 5em;
 }
 
 a {
@@ -51,4 +38,8 @@ a:hover {
 
 li {
 	padding-bottom: 1%;;
+}
+
+.link {
+	padding-top: 5%;
 }
