@@ -1,0 +1,137 @@
+body {
+	margin: 0;
+	font-family: Impact,Charcoal,sans-serif;
+}
+
+p,table {
+	font-family: "Lucida Console",Monaco,monospace;
+}
+
+header {
+	width: 100%;
+	padding: 5px;
+	text-align: right;
+	background-color: #111;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	padding-top: 15px;
+	font-size: 105%;
+}
+
+#nav li {
+	display: inline;
+	padding-left: 10px;
+	margin-left: 3%;
+	list-style: none;
+}
+
+#social a {
+	color: #111;
+}
+
+#social a:hover {
+	color: #555;
+}
+
+#third {
+	margin-right: 2%;
+}
+
+#nav a {
+	color: #DDD;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	color: #999;
+}
+
+#mePic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+#myName {
+	font-size: 200%;
+}
+
+#myCar {
+	font-size: 125%;
+}
+
+#social {
+	padding-top: 5px;
+}
+
+#social div {
+	display: inline;
+	padding: 10px;
+}
+
+.page {
+	float: left;
+	width: 100vw;
+	height: 100vh;
+}
+
+.one {
+	text-align: center;
+	background-image: url("keyboard");
+}
+
+.two {
+	background: #111;
+	overflow-y: scroll;
+	color: #DDD;
+}
+
+.three {
+	background: #FFF;
+	text-align: center;
+}
+
+#home {
+	padding-top: 15%;
+}
+
+#contact {
+	padding-top: 15%;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+#about {
+	padding-top: 7%;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+input[type=text],textarea {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	padding: 10px;
+	background-color: #111;
+	color: #DDD;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 50%;
+}
