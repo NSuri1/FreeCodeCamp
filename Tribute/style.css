@@ -32,6 +32,10 @@ a:hover {
 	padding-top: 5%;
 }
 
+.underline {
+	text-decoration: underline;
+}
+
 .white {
 	background-color: #FFF;
 }
