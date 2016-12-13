@@ -12,11 +12,7 @@
 <body>
 	<div id="container">
 		<div class="page" id="home">
-			<header class="top">
-				<h3 id="intro">From Robins, Illinois...</h2>
-				<h1 class="text-primary text-center" id="name">Dwyane Wade</h1>
-			</header>
-				<a href="#" class="scroll-down"><i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i></a>
+				<a href="#two" class="scroll-down"><i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i></a>
 		</div>
 		<div class="page" id="two">
 			
@@ -28,7 +24,11 @@
 
 
 	<script>
-
+		$(document).ready(function(){
+			$("a").click(function(){
+				console.log("anchor tag clicked...");
+			});
+		});
 	</script>
 	
 </body>

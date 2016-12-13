@@ -1,11 +1,16 @@
 body {
 	background-color: #000;
-	color: #98002E;
+	color: #FFF;
 }
 
 #container {
 	width: 100%;
 	height: 100%;
+}
+
+#home {
+	background-image: url("dwyane.jpg");
+	background-repeat: no-repeat;
 }
 
 .page {
@@ -14,18 +19,6 @@ body {
 	background-image: url("timeline.png");
 	background-repeat: no-repeat;
 	background-position: center;
-}
-
-#name {
-	color: #98002E;
-	font-weight: bold;
-	margin-top: 5px;
-}
-
-#intro {
-	font-style: italic;
-	margin-left: 20%;
-	margin-top: 40px;
 }
 
 .scroll-down {
