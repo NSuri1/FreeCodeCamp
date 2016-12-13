@@ -1,4 +1,4 @@
-.bitter-font {
+#container {
 	font-family: 'Bitter', serif;
 }
 
@@ -24,4 +24,18 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: 20px;
+}
+
+.underline {
+	text-decoration: underline;
+	margin-bottom: 20px;
+}
+
+.side-margins {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.section {
+	margin-top: 50px;
 }
