@@ -21,7 +21,11 @@ body {
 }
 
 .arrow {
-	position: absolute;
+	position: fixed;
 	bottom: 5%;
 	left: 49%;
+}
+
+.white {
+	background-color: #FFF;
 }
