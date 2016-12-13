@@ -13,10 +13,7 @@ a:hover {
 }
 
 #apple {
-	width: 100vw;
-	position: fixed;
-	top: 0;
-	z-index: -1;
+	width: 60%;
 }
 
 .page {
@@ -29,6 +26,10 @@ a:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.link {
+	padding-top: 5%;
 }
 
 .white {
