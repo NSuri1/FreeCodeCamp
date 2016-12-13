@@ -15,6 +15,7 @@
 
 		<div class="page flex-contain" id="home">
 			<img src="apple.png" alt="Apple logo" class="img-responsive" id="apple">
+			
 			<h1 id="brand">Apple</h1>
 			<q>Stay Hungry. Stay Foolish</q>
 			<a href="#milestones" id="anchor-one" class="anchor"><i class="fa fa-angle-double-down fa-2x arrow-down"></i></a>
@@ -116,15 +117,13 @@
 
 	<script>
 		$(document).ready(function(){
-			$("#container").hide();
-			$("#container").fadeIn(2000);
 
 			$("a").click(function(event){
 				if (this.hash !== "") {
 					event.preventDefault();
 					var hash = this.hash;
 
-					$('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){});
+					$("html, body").animate({scrollTop: $(hash).offset().top}, 800, function(){});
 				}
 			});
 		});
