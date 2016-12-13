@@ -2,6 +2,19 @@ body {
 	background-color: #FFF;
 	font-family: 'Bitter', serif;
 	z-index: 1;
+	font-size: 100%;
+}
+
+h1 {
+	font-size: 6em;
+}
+
+q {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 5em;
 }
 
 a {
@@ -12,13 +25,13 @@ a:hover {
 	color: #999;
 }
 
-#apple {
-	width: 60%;
-}
-
 .page {
 	width: 100vw;
 	height: 100vh;
+}
+
+.white {
+	background-color: #FFF;
 }
 
 .flex-contain {
@@ -28,14 +41,14 @@ a:hover {
 	align-items: center;
 }
 
-.link {
-	padding-top: 5%;
+#apple {
+	width: 70%;
 }
 
 .underline {
 	text-decoration: underline;
 }
 
-.white {
-	background-color: #FFF;
+li {
+	padding-bottom: 1%;;
 }
