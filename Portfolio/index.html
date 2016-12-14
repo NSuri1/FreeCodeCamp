@@ -147,7 +147,41 @@
 
 		<div id="contact" class="section side-margins">
 			<h2 class="underline">Contact</h2>
+			<form class="form-horizontal" action="sendMail.php" id="htmlform" method="post" name="htmlform">
+				<div class="form-group">
+					<label for="first" class="control-label col-md-3">First Name:</label>
+					<div class="col-md-9">
+						<input maxlength="40" name="first_name" size="10" type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="last" class="control-label col-md-3">Last Name:</label>
+					<div class="col-md-9">
+						<input maxlength="40" name="last_name" size="25" type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="em" class="control-label col-md-3">Email Address:</label>
+					<div class="col-md-9">
+						<input maxlength="80" name="email" size="25" type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="phone" class="control-label col-md-3">Telephone Number:</label>
+					<div class="col-md-9">
+						<input maxlength="25" name="telephone" size="25" type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="comment" class="control-label col-md-3">Message:</label>
+					<div class="col-md-9">
+						<textarea cols="25" maxlength="1000" name="comments" rows="5" class="form-control"></textarea>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default btn-block btn-primary">Submit</button>
+			</form>
 		</div>
+		<br/>
 		
 	</div>
 </body>
