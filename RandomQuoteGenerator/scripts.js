@@ -3,3 +3,6 @@ $(document).ready(function(){
 	$(".test").html("Test");
 
 });
+
+var quotes = [
+{quote: , }, {}]

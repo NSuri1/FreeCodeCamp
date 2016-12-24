@@ -1,0 +1,15 @@
+body {
+	font-family: 'Bitter', serif;
+}
+
+.head {
+	margin-top: 30px;
+}
+
+.quote {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	flex-flow: center;
+	align-items: center;
+}
