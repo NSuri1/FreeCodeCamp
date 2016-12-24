@@ -37,11 +37,13 @@ body {
 
 .person {
 	font-size: 1.1em;
+	font-style: italic;
 	padding: 5px;
-	position: relative;
-	left: 60px;
+	position: absolute;
+	right: 10%;
+	margin-top: 20px;
 }
 
 .new {
-	margin-top: 40px;
+	margin-top: 60px;
 }
