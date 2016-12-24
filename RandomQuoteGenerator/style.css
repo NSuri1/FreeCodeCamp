@@ -1,15 +1,47 @@
 body {
 	font-family: 'Bitter', serif;
+	background-color: rgba(0, 154, 204, 0.5);
+	color: #000;
 }
 
 .head {
-	margin-top: 30px;
+	margin-top: 5%;
+}
+
+.description {
+	margin-top: 10px;
+	font-size: 1.1em;
 }
 
 .quote {
-	margin-top: 50px;
+	background-color: #FFF;
+	margin-top: 20px;
+	padding: 20px;
+	border-style: solid;
+	border-radius: 30px;
+	border-width: 5px;
+	border-color: #000;
+	min-height: 300px;
+	height: auto;
 	display: flex;
 	flex-direction: column;
-	flex-flow: center;
+	flex-wrap: nowrap;
 	align-items: center;
+	justify-content: center;
+}
+
+.saying {
+	font-size: 1.2em;
+	padding: 5px;
+}
+
+.person {
+	font-size: 1.1em;
+	padding: 5px;
+	position: relative;
+	left: 60px;
+}
+
+.new {
+	margin-top: 40px;
 }
