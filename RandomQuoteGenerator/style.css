@@ -4,13 +4,16 @@ body {
 	color: #000;
 }
 
-.head {
-	margin-top: 5%;
+.margin {
+	margin-top: 60px;
+	margin-right: 10%;
+	margin-left: 10%;
 }
+
 
 .description {
 	margin-top: 10px;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
 
 .quote {
@@ -31,12 +34,12 @@ body {
 }
 
 .saying {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	padding: 5px;
 }
 
 .person {
-	font-size: 1.1em;
+	font-size: 1.2em;
 	font-style: italic;
 	padding: 5px;
 	position: absolute;
