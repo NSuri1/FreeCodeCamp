@@ -49,7 +49,7 @@ p {
 	box-shadow: 10px 10px 5px grey;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	padding-bottom: 15%;
 	border-style: solid;
@@ -66,4 +66,5 @@ p {
 	color: #000;
 	padding-top: 5%;
 	font-size: 1.7em;
+	text-align: center;
 }
