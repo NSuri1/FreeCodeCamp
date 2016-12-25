@@ -3,8 +3,9 @@ $(document).ready(function(){
 	$(".test").html("Test");
 
 	$(".new").on("click", function(){
-		console.log("New quote requested");
-		console.log(quotes[0].saying);
+		var index = Math.floor(Math.random() * 25);
+		$(".saying").html("<q>" + quotes[index].saying + "</q>");
+		$(".person").html("-" + quotes[index].person);
 	});
 
 });
@@ -24,7 +25,7 @@ var quotes = [{"saying":"Life is about making an impact, not making an income.",
  {"saying":"We become what we think about.", "person":"Earl Nightingale"},
  {"saying":"Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover.", "person":"Mark Twain"}, 
  {"saying":"Life is 10% what happens to me and 90% of how I react to it.", "person":"Charles Swindoll"}, 
- {"saying":"The most common way people give up their power is by thinking they don’t have any.", "person":"Alice Walker"}, 
+ {"saying":"The most common way people give up their power is by thinking they don't have any.", "person":"Alice Walker"}, 
  {"saying":"The mind is everything. What you think you become.", "person":"Buddha"},
  {"saying":"The best time to plant a tree was 20 years ago. The second best time is now.", "person":"Chinese Proverb"}, 
  {"saying":"An unexamined life is not worth living.", "person":"Socrates"}, 
