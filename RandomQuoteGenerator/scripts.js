@@ -1,11 +1,25 @@
 $(document).ready(function(){
-	$(".test").addClass("well");
-	$(".test").html("Test");
+	$(".saying").html("<q>" + quotes[0].saying + "</q>");
+	$(".person").html('<a class= "text-color" href="' + quotes[0].wiki + '">-' + quotes[0].person + '</a>');
+	$(".tweet").attr("href", "https://twitter.com/intent/tweet?text=" + quotes[0].saying.split(" ").join("%20") + " -" + quotes[0].person.split(" ").join("%20"));
 
 	$(".new").on("click", function(){
 		var index = Math.floor(Math.random() * 25);
-		$(".saying").html("<q>" + quotes[index].saying + "</q>");
-		$(".person").html('<a href="' + quotes[index].wiki + '" target="_blank">' + quotes[index].person + '</a>');
+		var message = quotes[index].saying;
+		var person = quotes[index].person;
+		var href = "https://twitter.com/intent/tweet?text=" + message.split(" ").join("%20") + " -" + person.split(" ").join("%20");
+		$(".saying").html("<q>" + message + "</q>");
+		$(".person").html('<a class="text-color" href="' + quotes[index].wiki + '">-' + person + '</a>');
+		$(".tweet").attr("href", href);
+
+		var newColor = "#";
+		for (k = 0; k < 3; k++) {
+			//Did not put 256 so colors are not too light
+		    newColor += ("0" + Math.floor(Math.random()*175).toString(16)).substr(-2);
+		}
+
+		$(".background").css("background-color", newColor);
+		$(".text-color").css("color", newColor);
 	});
 
 });
@@ -27,7 +41,7 @@ var quotes = [{"saying":"Life is about making an impact, not making an income.",
  {"saying":"Life is 10% what happens to me and 90% of how I react to it.", "person":"Charles Swindoll", "wiki":"https://en.wikipedia.org/wiki/Chuck_Swindoll"}, 
  {"saying":"The most common way people give up their power is by thinking they don't have any.", "person":"Alice Walker", "wiki":"https://en.wikipedia.org/wiki/Alice_Walker"}, 
  {"saying":"The mind is everything. What you think you become.", "person":"Buddha", "wiki":"https://en.wikipedia.org/wiki/Gautama_Buddha"},
- {"saying":"The best time to plant a tree was 20 years ago. The second best time is now.", "person":"Chinese Proverb", "wiki":""}, 
+ {"saying":"The best time to plant a tree was 20 years ago. The second best time is now.", "person":"Chinese Proverb", "wiki":"#"}, 
  {"saying":"An unexamined life is not worth living.", "person":"Socrates", "wiki":"https://en.wikipedia.org/wiki/Socrates"}, 
  {"saying":"Eighty percent of success is showing up.", "person":"Woody Allen", "wiki":"https://en.wikipedia.org/wiki/Woody_Allen"}, 
  {"saying":"Your time is limited, so don’t waste it living someone else’s life.", "person":"Steve Jobs", "wiki":"https://en.wikipedia.org/wiki/Steve_Jobs"},

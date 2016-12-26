@@ -1,11 +1,30 @@
 body {
 	font-family: 'Bitter', serif;
-	background-color: rgba(0, 154, 204, 0.5);
-	color: #000;
 }
 
-a:hover {
-	color: #888;
+.white-text {
+	color: #FFF;
+}
+
+.background {
+	background-color: rgb(20, 10, 50);
+	-webkit-transition:background 1s;
+    -moz-transition:background 1s;
+    -o-transition:background 1s;
+    transition:background 1s;
+}
+
+.buttons:hover {
+	opacity: 0.9;
+	color:#FFF;
+}
+
+.text-color {
+	color: rgb(20, 10, 50);
+	-webkit-transition:background 1s;
+    -moz-transition:background 1s;
+    -o-transition:background 1s;
+    transition:background 1s;
 }
 
 .margin {
@@ -51,8 +70,19 @@ a:hover {
 	right: 5%;
 }
 
-.new {
-	margin-top: 50px;
+.person:hover {
+	opacity: 0.7;
+}
+
+.buttons {
 	padding-top: 10px;
 	padding-bottom: 10px;
+	display: inline;
+	margin: 5px;
+	width: 120px;
+	color: #FFF;
+}
+
+.btn-holder {
+	margin-top: 50px;
 }
