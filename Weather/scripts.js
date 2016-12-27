@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	if(navigator.geolocation){
-		navigator.geolocation.getCurrentPosition(success, error);
+		navigator.geolocation.getCurrentPosition(success);
+	}
+	else {
+		alert("Geolocation is not working");
 	}
 
 	$(".fahrenheit").attr("disabled", "disabled");
@@ -40,18 +43,20 @@ function success(location){
 	$.getJSON(jsonLocation, data, function(weather){
 		temperatureInKelvin = weather["main"]["temp"];
 		var temp = temperatureInKelvin;
+		var id = weather["weather"][0]["id"];	
 		$(".location").text(weather["name"]);
 		$(".description").html(weather["weather"][0]["description"].toUpperCase());
-		$(".temp").text(kToF(temperatureInKelvin) + "\xB0F");
+		if(200 <= id < 900){
+			$(".pic").attr("src", "http://openweathermap.org/img/w/" + weather["weather"][0]["icon"] + ".png");
+			$(".pic").show();
+		}
+		else {
+			$(".pic").hide();
+		}
 
-		var id = weather["weather"][0]["id"];	
+		$(".temp").text(kToF(temperatureInKelvin) + "\xB0F");
 		setBackground(id);
 	});
-}
-
-function error(msg){
-	alert("Error in getting current location. \nMiami's weather will be displayed");
-	$(".location").text("Miami, FL");
 }
 
 function kToF(temp) {
