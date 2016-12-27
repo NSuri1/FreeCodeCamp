@@ -7,8 +7,8 @@ body {
     transition: background-image 1s;
 }
 
-.locale-pick {
-	margin: 20px;
+.pad-10px {
+	padding: 10px;
 }
 
 .container {
@@ -21,6 +21,7 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 5%;
     padding: 20px;
+    background-color: #FFF;
 }
 
 .pic {

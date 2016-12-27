@@ -6,15 +6,21 @@ $(document).ready(function(){
 	$(".fahrenheit").attr("disabled", "disabled");
 
 	$(".celcius").on("click", function(){
-		$(".celcius").attr("disabled", "disabled");
+		$(this).attr("disabled", "disabled");
 		$(".fahrenheit").removeAttr("disabled");
-		$(".temp").text(kToC(temperatureInKelvin) + "\xB0");
+		$(".temp").animate({"opacity": 0}, 250, function(){
+			$(this).text(kToC(temperatureInKelvin) + "\xB0C");
+		});
+		$(".temp").animate({"opacity": 1}, 250);
 	});
 
 	$(".fahrenheit").on("click", function(){
-		$(".fahrenheit").attr("disabled", "disabled");
+		$(this).attr("disabled", "disabled");
 		$(".celcius").removeAttr("disabled");
-		$(".temp").text(kToF(temperatureInKelvin) + "\xB0");
+		$(".temp").animate({"opacity": 0}, 250, function(){
+			$(this).text(kToF(temperatureInKelvin) + "\xB0C");
+		});
+		$(".temp").animate({"opacity": 1}, 250);
 	});
 	
 });
@@ -36,7 +42,7 @@ function success(location){
 		var temp = temperatureInKelvin;
 		$(".location").text(weather["name"]);
 		$(".description").html(weather["weather"][0]["description"].toUpperCase());
-		$(".temp").text(kToF(temperatureInKelvin) + "\xB0");
+		$(".temp").text(kToF(temperatureInKelvin) + "\xB0F");
 
 		var id = weather["weather"][0]["id"];	
 		setBackground(id);
