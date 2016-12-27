@@ -3,7 +3,8 @@ body {
 }
 
 .background {
-
+	-webkit-transition: background-image 1s; /* Safari */
+    transition: background-image 1s;
 }
 
 .locale-pick {
@@ -24,4 +25,16 @@ body {
 
 .pic {
 	width: 50px;
+}
+
+.font-4x {
+	font-size: 3em;
+}
+
+.font-3x {
+	font-size: 2em;
+}
+
+.font-2x {
+	font-size: 1.5em;
 }
