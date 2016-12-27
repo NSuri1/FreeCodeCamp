@@ -3,16 +3,25 @@ body {
 }
 
 .background {
-	
+
+}
+
+.locale-pick {
+	margin: 20px;
 }
 
 .container {
+	min-width: 300px;
+	min-height: 200px;
 	width: 40%;
 	position: fixed;
 	top: 50%;
 	left: 50%;
     transform: translate(-50%, -50%);
-    min-height: 200px;
-    background-color: #FFF;
     border-radius: 5%;
+    padding: 20px;
+}
+
+.pic {
+	width: 50px;
 }
