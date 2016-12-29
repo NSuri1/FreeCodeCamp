@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		$(".fahrenheit").removeAttr("disabled");
 		$(".temp").animate({"opacity": 0}, 250, function(){
-			$(this).text(kToC(temperatureInKelvin) + "\xB0C");
+			$(this).text(toC(temperature) + "\xB0C");
 		});
 		$(".temp").animate({"opacity": 1}, 250);
 	});
@@ -21,47 +21,44 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		$(".celcius").removeAttr("disabled");
 		$(".temp").animate({"opacity": 0}, 250, function(){
-			$(this).text(kToF(temperatureInKelvin) + "\xB0C");
+			$(this).text(toF(temperature) + "\xB0F");
 		});
 		$(".temp").animate({"opacity": 1}, 250);
 	});
 	
 });
 
-var temperatureInKelvin = 0;
+var temperature = 0;
 
 function success(location){
 	var lat = location.coords.latitude;
 	var long = location.coords.longitude;
-	var jsonLocation = "http://api.openweathermap.org/data/2.5/weather";
-	var data = {
-		"lat": lat,
-		"lon": long,
-		"APPID": "e34a9855fd2a7c8af5f930144984b5c1"
-	}
 
-	$.getJSON(jsonLocation, data, function(weather){
-		temperatureInKelvin = weather["main"]["temp"];
-		var temp = temperatureInKelvin;
+	var cityJSONLocation = " https://www.geocode.farm/v3/json/reverse/?lat=" + lat + "&lon=" + long;
 
-		$(".location").text(weather["name"]);
-		$(".description").html(weather["weather"][0]["description"].toUpperCase());
-		if(200 <= weather["weather"][0]["id"] < 900){
-			$(".pic").attr("src", "http://openweathermap.org/img/w/" + weather["weather"][0]["icon"] + ".png");
-			$(".pic").show();
-		}
-		else {
-			$(".pic").hide();
-		}
+	$.getJSON(cityJSONLocation, function(city){
+		$(".location").text(city["geocoding_results"]["RESULTS"][1]["ADDRESS"]["locality"]);
+	}, function(err){
+		$(".location").text("Weather Conditions Outside");
+	});
 
-		$(".temp").text(kToF(temperatureInKelvin) + "\xB0F");
+	var weatherJSONLocation = "https://api.darksky.net/forecast/b1be7136a4865d4047669e491bd0e2b8/"+ lat + "," + long;
+
+	$.getJSON(weatherJSONLocation, function(weather){
+		temperature= Math.round(weather["currently"]["temperature"]);
+		$(".description").html(weather["currently"]["summary"].toUpperCase());
+		$(".temp").text(temperature + "\xB0F");
+	}, function(err){
+		alert("Error in getting weather");
 	});
 }
 
-function kToF(temp) {
-	return Math.round((temp * 9 / 5) - 459.67);
+function toF(temp) {
+	temperature = Math.round((temp * 9 / 5) + 32);
+	return temperature;
 }
 
-function kToC(temp){
-	return Math.round(temp - 273.15);
+function toC(temp){
+	temperature = Math.round((temp - 32) * 5 / 9);
+	return temperature;
 }
