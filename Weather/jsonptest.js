@@ -28,7 +28,6 @@ $(document).ready(function(){
 	
 });
 
-var temperature = 0;
 
 function success(location){
 	var lat = location.coords.latitude;
@@ -42,9 +41,12 @@ function success(location){
 		$(".location").text("Weather Conditions Outside");
 	});
 
-	var weatherJSONLocation = "https://api.darksky.net/forecast/b1be7136a4865d4047669e491bd0e2b8/"+ lat + "," + long;
+	getWeather(lat, long);
 
-	.ajax({
+}
+
+function getWeather(lat, long){
+	$.ajax({
         url: "https://api.darksky.net/forecast/b1be7136a4865d4047669e491bd0e2b8/"+ lat + "," + long,
       	dataType: 'jsonp',
        	success: function(weather){
