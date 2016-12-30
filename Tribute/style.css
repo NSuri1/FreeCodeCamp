@@ -15,6 +15,8 @@ a:hover {
 .page {
 	width: 100vw;
 	height: 100vh;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .white {
@@ -42,7 +44,7 @@ li {
 }
 
 .anchor {
-	margin-top: 5%;
+	margin-top: 2%;
 }
 
 .date {
