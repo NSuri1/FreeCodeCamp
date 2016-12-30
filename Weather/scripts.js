@@ -51,6 +51,8 @@ function success(location){
        		temperature= Math.round(weather["currently"]["temperature"]);
 			$(".description").html(weather["currently"]["summary"].toUpperCase());
 			$(".temp").text(temperature + "\xB0F");
+
+			changeBackground(weather["currently"]["icon"]);
 	    },
 	    error: function(err){
 	    	alert("Error!");
@@ -66,4 +68,41 @@ function toF(temp) {
 function toC(temp){
 	temperature = Math.round((temp - 32) * 5 / 9);
 	return temperature;
+}
+
+function changeBackground(icon){
+	console.log("function called " + icon);
+	var iconPath;
+	switch(icon){
+		case "clear-day":
+		iconPath = "clear_day.jpg";
+		break;
+		case "clear-night":
+		iconPath = "clear_night.jpg";
+		break;
+		case "rain":
+		iconPath = "rain.jpg";
+		break;
+		case "snow":
+		case "sleet":
+		iconPath = "snow.jpg";
+		break;
+		case "wind":
+		iconPath = "windy.jpg";
+		break;
+		case "fog":
+		iconPath = "fog.jpg";
+		break;
+		case "cloudy":
+		iconPath = "cloudy.jpg";
+		break;
+		case "partly-cloudy-day":
+		case "partly-cloudy-night":
+		iconPath = "partly_cloudy.jpg";
+		break;
+		default:
+		iconPath = "clear_day.jpg";
+	}
+
+	$(".background").attr("src", iconPath);
 }
