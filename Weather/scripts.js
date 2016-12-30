@@ -103,6 +103,8 @@ function changeBackground(icon){
 		default:
 		iconPath = "clear_day.jpg";
 	}
-
-	$(".background").attr("src", iconPath);
+	$(".background").animate({"opacity": 0}, 1000, function(){
+			$(this).attr("src", iconPath);
+		});
+	$(".background").animate({"opacity": 1}, 1000);
 }
