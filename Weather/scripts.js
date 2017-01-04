@@ -1,11 +1,11 @@
-$(document).ready(function(){
-	if(navigator.geolocation){
-		navigator.geolocation.getCurrentPosition(success);
-	}
-	else {
-		alert("Geolocation is not working. \nPlease try again another time.");
-	}
+if(navigator.geolocation){
+	navigator.geolocation.getCurrentPosition(success);
+}
+else {
+	alert("Geolocation is not working. \nPlease try again another time.");
+}
 
+$(document).ready(function(){
 	$(".fahrenheit").attr("disabled", "disabled");
 
 	$(".celcius").on("click", function(){
@@ -21,7 +21,7 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		$(".celcius").removeAttr("disabled");
 		$(".temp").animate({"opacity": 0}, 250, function(){
-			$(this).text(toF(temperature) + "\xB0F");
+			$(this).text(temperature + "\xB0F");
 		});
 		$(".temp").animate({"opacity": 1}, 250);
 	});
@@ -60,14 +60,8 @@ function success(location){
     });
 }
 
-function toF(temp) {
-	temperature = Math.round((temp * 9 / 5) + 32);
-	return temperature;
-}
-
 function toC(temp){
-	temperature = Math.round((temp - 32) * 5 / 9);
-	return temperature;
+	return Math.round((temp - 32) * 5 / 9);
 }
 
 function changeBackground(icon){
