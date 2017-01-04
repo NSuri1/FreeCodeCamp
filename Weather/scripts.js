@@ -1,3 +1,20 @@
+//Varible declarations
+var temperature = 0;
+var conditions = {
+	"clear-day": "clear_day.jpg",
+	"clear-night": "clear_night.jpg",
+	"rain": "rain.jpg",
+	"snow":"snow.jpg",
+	"sleet": "snow.jpg",
+	"wind": "windy.jpg",
+	"fog": "fog.jpg",
+	"cloudy": "cloudy.jpg",
+	"partly-cloudy-day": "partly_cloudy.jpg",
+	"partly-cloudy-night": "partly_cloudy.jpg",
+	"default": "partly_cloudy.jpg"
+}
+
+//Check if support geolocator
 if(navigator.geolocation){
 	navigator.geolocation.getCurrentPosition(success);
 }
@@ -5,6 +22,7 @@ else {
 	alert("Geolocation is not working. \nPlease try again another time.");
 }
 
+//Things to do when page has loaded
 $(document).ready(function(){
 	$(".fahrenheit").attr("disabled", "disabled");
 
@@ -28,7 +46,7 @@ $(document).ready(function(){
 	
 });
 
-var temperature = 0;
+//function definitions
 
 function success(location){
 	var lat = location.coords.latitude;
@@ -65,38 +83,15 @@ function toC(temp){
 }
 
 function changeBackground(icon){
-	console.log("function called " + icon);
 	var iconPath;
-	switch(icon){
-		case "clear-day":
-		iconPath = "clear_day.jpg";
-		break;
-		case "clear-night":
-		iconPath = "clear_night.jpg";
-		break;
-		case "rain":
-		iconPath = "rain.jpg";
-		break;
-		case "snow":
-		case "sleet":
-		iconPath = "snow.jpg";
-		break;
-		case "wind":
-		iconPath = "windy.jpg";
-		break;
-		case "fog":
-		iconPath = "fog.jpg";
-		break;
-		case "cloudy":
-		iconPath = "cloudy.jpg";
-		break;
-		case "partly-cloudy-day":
-		case "partly-cloudy-night":
-		iconPath = "partly_cloudy.jpg";
-		break;
-		default:
-		iconPath = "clear_day.jpg";
+
+	if (conditions[icon]){
+		iconPath = conditions[icon];
 	}
+	else{
+		iconPath = conditions["default"];
+	}
+	
 	$(".background").animate({"opacity": 0}, 1000, function(){
 			$(this).attr("src", iconPath);
 		});
