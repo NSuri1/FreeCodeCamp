@@ -91,9 +91,8 @@ function changeBackground(icon){
 	else{
 		iconPath = conditions["default"];
 	}
-	
-	$(".background").animate({"opacity": 0}, 1000, function(){
+
+	$(".background").hide(1000, function(){
 			$(this).attr("src", iconPath);
-		});
-	$(".background").animate({"opacity": 1}, 1000);
+		}).show(1000);
 }
